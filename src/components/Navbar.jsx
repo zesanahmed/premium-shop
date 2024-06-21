@@ -35,14 +35,13 @@ const Navbar = () => {
           </>
         )
       }
-      
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Premium Shop</a>
+    <a className=" text-xl">Premium Shop</a>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-end hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    <li><Link to={"/"}>Home</Link></li>
+      <li><Link to={"/"}>Home</Link></li>
       <li><Link to={"/about"}>About</Link></li>
       { !user &&
          (
@@ -52,19 +51,13 @@ const Navbar = () => {
           </>
         )
       }
-      { user &&
-        (
-          <>
-          <li><Link to={"/dashboard"}>Dashboard</Link></li>
-          </>
-        )
-      }
     </ul>
   </div>
-  <div className="navbar-end">
+  <div>
     { user &&
        (
         <>
+      <button className="mr-4"><Link to={"/dashboard"}>Dashboard</Link></button>
       <button onClick={handleLogout} className="btn btn-sm mr-4 bg-red-500 text-white">LogOut</button>
         <div className="avatar">
         <div className="w-10 rounded-full">

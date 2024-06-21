@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 
 
 const AddProduct = () => {
@@ -14,7 +15,7 @@ const AddProduct = () => {
         const data = {title,brand,price,description,image};
         console.log(data)
 
-        await fetch("http://localhost:5000/phones",{
+       await fetch("http://localhost:5000/phones",{
             method:"POST",
             headers:{
                 "content-type": "application/json"
@@ -22,8 +23,8 @@ const AddProduct = () => {
             body: JSON.stringify(data)
         })
         .then(res => res.json())
-        .then(data => {
-            console.log(data);
+        .then(() => {
+          toast.success('Successfully created!')
             form.reset();
         })
     }
