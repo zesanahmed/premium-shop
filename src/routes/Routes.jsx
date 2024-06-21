@@ -41,12 +41,12 @@ export const router = createBrowserRouter([
         element: <DashboardLayout/>,
         errorElement: <ErrorPage/>,
         children: [
-            // {
-            //     path: "",
-            //     element: <PrivateRoute>
-            //         <Dashboard/>
-            //     </PrivateRoute>
-            // },
+            {
+                path: "",
+                element: <PrivateRoute>
+                    <Dashboard/>
+                </PrivateRoute>
+            },
             {
                 path: "dashboard/all-products",
                 element: <PrivateRoute>
