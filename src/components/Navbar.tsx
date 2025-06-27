@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { FaSearch, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const { logOut, user } = useAuth();
@@ -9,83 +10,145 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <button className="btn btn-primary">Primary</button>
-        <div className="dropdown">
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
+    <div className="sticky top-0 z-50 bg-primary text-white shadow-md">
+      <div className="navbar max-w-7xl mx-auto px-4">
+        {/* Left: Logo */}
+        <div className="flex-1">
+          <Link to="/" className="text-xl font-bold">
+            PremiumShop
+          </Link>
+        </div>
+
+        {/* Center: Navigation Links */}
+        <div className="flex-none hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 gap-2">
             <li>
-              <Link to={"/"}>Home</Link>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <Link to="/shop">Shop</Link>
             </li>
-            {!user && (
-              <>
-                <li>
-                  <Link to={"/login"}>Login</Link>
-                </li>
-                <li>
-                  <Link to={"/register"}>Register</Link>
-                </li>
-              </>
-            )}
-            {user && (
-              <>
-                <li>
-                  <Link to={"/dashboard"}>Dashboard</Link>
-                </li>
-              </>
-            )}
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li tabIndex={0}>
+              <details>
+                <summary>Categories</summary>
+                <ul className="p-2 bg-base-100 text-black w-52">
+                  <li>
+                    <Link to="/category/electronics">Electronics</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/fashion">Fashion</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/home">Home</Link>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </div>
-        <a className=" text-xl">Premium Shop</a>
-      </div>
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/about"}>About</Link>
-          </li>
-          {!user && (
-            <>
-              <li>
-                <Link to={"/login"}>Login</Link>
-              </li>
-              <li>
-                <Link to={"/register"}>Register</Link>
-              </li>
-            </>
-          )}
-        </ul>
-      </div>
-      <div>
-        {user && (
-          <>
-            <button className="mr-4">
-              <Link to={"/dashboard"}>Dashboard</Link>
-            </button>
+
+        {/* Right: Search + Cart + Profile */}
+        <div className="flex items-center gap-4">
+          {/* Search Bar */}
+          <div className="relative hidden md:block">
+            <input
+              type="text"
+              placeholder="Search"
+              className="input input-bordered w-40 md:w-60 text-black pr-12"
+            />
             <button
-              onClick={handleLogout}
-              className="btn btn-sm mr-4 bg-red-500 text-white"
+              type="submit"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary z-10"
             >
-              LogOut
+              <FaSearch />
             </button>
-            <div className="avatar">
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-          </>
-        )}
+          </div>
+
+          {/* Cart Icon */}
+          <Link to="/cart" className="btn btn-ghost btn-circle text-white">
+            <FaShoppingCart size={20} />
+          </Link>
+
+          {/* Profile Image */}
+          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white">
+            <img
+              src="https://i.pravatar.cc/100?img=3"
+              alt="User"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="dropdown dropdown-end lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-black"
+          >
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/shop">Shop</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li tabIndex={0}>
+              <details>
+                <summary>Categories</summary>
+                <ul className="p-2 bg-base-100 text-black w-52">
+                  <li>
+                    <Link to="/category/electronics">Electronics</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/fashion">Fashion</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/home">Home</Link>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
