@@ -12,12 +12,15 @@ const AllProducts = () => {
     },[])
     return (
         <div>
+            <h1 className="text-center text-3xl font-bold mb-6">All Products</h1>
+            <div className="grid grid-cols-3 gap-4">
             {
                 phones.map(phone => <PhoneCard
-                key={phone.id}
+                key={phone._id}
                 phone={phone}
                 />)
             }
+            </div>
         </div>
     );
 };

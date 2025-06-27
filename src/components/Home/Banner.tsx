@@ -1,5 +1,4 @@
-
-import InfoCard from './InfoCard';
+import InfoCard from "./InfoCard";
 
 const Banner = () => {
   return (
@@ -19,13 +18,18 @@ const Banner = () => {
         <p className="text-md text-gray-600 mb-6">
           Discover the Best Deals on Top-Quality Products!
         </p>
-        <InfoCard/>
-        <p className="text-lg text-gray-600 mt-8">Built with the Latest Technology:</p>
+        <InfoCard />
+        <p className="text-lg text-gray-600 mt-8">
+          Built with the Latest Technology:
+        </p>
         <ul className="text-lg text-gray-600 mb-8">
           <li>React for a dynamic and responsive user experience</li>
           <li>Express for robust and scalable backend services</li>
           <li>MongoDB for secure and efficient data management</li>
-          <li>Tailwind CSS & DaisyUI for a beautiful, modern, and customizable design</li>
+          <li>
+            Tailwind CSS & DaisyUI for a beautiful, modern, and customizable
+            design
+          </li>
         </ul>
         <a
           href="/shop"
