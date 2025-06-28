@@ -1,6 +1,7 @@
+import React from "react";
 import InfoCard from "./InfoCard";
 
-const Banner = () => {
+const BannerCart = () => {
   return (
     <div className="bg-gray-100">
       <div className="container mx-auto px-5 pb-6 text-center">
@@ -42,4 +43,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerCart;

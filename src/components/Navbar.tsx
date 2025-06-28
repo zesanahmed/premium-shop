@@ -23,13 +23,10 @@ const Navbar = () => {
         <div className="flex-none hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-2">
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
+              <Link to="/brand">Brand</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -48,7 +45,36 @@ const Navbar = () => {
                     <Link to="/category/fashion">Fashion</Link>
                   </li>
                   <li>
-                    <Link to="/category/home">Home</Link>
+                    <Link to="/category/home-living">Home & Living</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/beauty-personal-care">
+                      Beauty & Personal Care
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/food-groceries">Food & Groceries</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/entertainment-gaming">
+                      Entertainment & Gaming
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/sports-fitness">Sports & Fitness</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/books-stationery">
+                      Books & Stationery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/jewelry-accessories">
+                      Jewelry & Accessories
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/automobiles">Automobiles</Link>
                   </li>
                 </ul>
               </details>
@@ -114,13 +140,10 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-black"
           >
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
+              <Link to="/brand">Brand</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -139,7 +162,36 @@ const Navbar = () => {
                     <Link to="/category/fashion">Fashion</Link>
                   </li>
                   <li>
-                    <Link to="/category/home">Home</Link>
+                    <Link to="/category/home-living">Home & Living</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/beauty-personal-care">
+                      Beauty & Personal Care
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/food-groceries">Food & Groceries</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/entertainment-gaming">
+                      Entertainment & Gaming
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/sports-fitness">Sports & Fitness</Link>
+                  </li>
+                  <li>
+                    <Link to="/category/books-stationery">
+                      Books & Stationery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/jewelry-accessories">
+                      Jewelry & Accessories
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/category/automobiles">Automobiles</Link>
                   </li>
                 </ul>
               </details>

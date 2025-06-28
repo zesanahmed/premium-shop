@@ -1,9 +1,11 @@
-import Banner from "./Banner";
+import InfoCard from "./InfoCard";
+import BannerCarousel from "./BannerCarousel";
 
 const Home = () => {
   return (
     <div>
-      <Banner />
+      <BannerCarousel />
+      <InfoCard />
     </div>
   );
 };
