@@ -3,6 +3,8 @@ import BannerCarousel from "./BannerCarousel";
 import CategoriesSection from "../categories/CategoriesSection";
 import FeaturedProducts from "./FeaturedProducts";
 import FlashSaleSection from "./FlashSaleSection";
+import NewArrivalsSection from "./NewArrivalsSection";
+import ServicesSection from "./ServicesSection";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <CategoriesSection />
       <FeaturedProducts />
       <FlashSaleSection />
+      <NewArrivalsSection />
+      <ServicesSection />
       <InfoCard />
     </div>
   );

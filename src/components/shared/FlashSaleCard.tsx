@@ -12,7 +12,7 @@ interface Product {
 
 const FlashSaleCard = ({ product }: { product: Product }) => {
   return (
-    <div className="group relative bg-white hover:shadow-lg transition-all duration-300 overflow-hidden">
+    <div className="group relative bg-white  shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
       {/* Discount Badge */}
       <div className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded z-10">
         -{product.discount}%
