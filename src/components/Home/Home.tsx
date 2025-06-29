@@ -5,6 +5,8 @@ import FeaturedProducts from "./FeaturedProducts";
 import FlashSaleSection from "./FlashSaleSection";
 import NewArrivalsSection from "./NewArrivalsSection";
 import ServicesSection from "./ServicesSection";
+import NewsletterSection from "./NewsletterSection";
+import ReviewSection from "./ReviewSection";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <FlashSaleSection />
       <NewArrivalsSection />
       <ServicesSection />
+      <NewsletterSection />
+      <ReviewSection />
       <InfoCard />
     </div>
   );
