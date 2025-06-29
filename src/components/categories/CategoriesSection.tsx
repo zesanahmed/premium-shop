@@ -4,21 +4,21 @@ import CategoryCard from "./CategoryCard";
 const categories = [
   {
     title: "Fashion",
-    image: "/public/fashion.webp",
+    image: "/fashion.webp",
     productCount: 45,
     link: "/category/fashion",
     bgColor: "bg-[#FFFDEB]",
   },
   {
     title: "Devices",
-    image: "/public/devices.jpg", // make sure it's a real transparent PNG
+    image: "/devices.jpg", // make sure it's a real transparent PNG
     productCount: 120,
     link: "/category/devices",
     bgColor: "bg-[#FFF3F3]",
   },
   {
     title: "Electronics",
-    image: "/public/electronics.webp",
+    image: "/electronics.webp",
     productCount: 80,
     link: "/category/electronics",
     bgColor: "bg-[#F0FAFF]",
@@ -26,7 +26,7 @@ const categories = [
 
   {
     title: "toys",
-    image: "/public/toys.webp",
+    image: "/toys.webp",
     productCount: 60,
     link: "/category/toys",
     bgColor: "bg-[#EFFBF5]",

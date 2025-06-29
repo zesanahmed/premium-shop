@@ -21,7 +21,7 @@ const NewArrivalsSection: React.FC = () => {
         {/* Left large image */}
         <div className="col-span-4 rounded-lg overflow-hidden shadow-lg  max-h-96">
           <img
-            src="/public/shop.jpg"
+            src="/shop.jpg"
             alt="New Arrivals Banner"
             className="w-full h-full object-cover aspect-[4/5]"
           />

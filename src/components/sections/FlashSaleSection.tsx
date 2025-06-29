@@ -9,7 +9,7 @@ const FlashSaleSection = () => {
         {/* Left Banner Image */}
         <div className="col-span-1 row-span-2">
           <img
-            src="/public/laptop.jpg"
+            src="/laptop.jpg"
             alt="Flash Sale Banner"
             className="h-full w-full object-cover rounded-l-xl"
           />

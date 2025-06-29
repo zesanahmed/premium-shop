@@ -20,7 +20,7 @@ const BannerCarousel = () => {
         <div className="relative w-full h-[70vh]">
           {/* Background Image */}
           <img
-            src="/public/laptop.jpg"
+            src="/laptop.jpg"
             alt="Banner"
             className="w-full h-full object-cover"
           />
@@ -45,7 +45,7 @@ const BannerCarousel = () => {
         <div className="relative w-full h-[70vh]">
           {/* Background Image */}
           <img
-            src="/public/laptop.jpg"
+            src="/laptop.jpg"
             alt="Banner"
             className="w-full h-full object-cover"
           />
@@ -70,7 +70,7 @@ const BannerCarousel = () => {
         <div className="relative w-full h-[70vh]">
           {/* Background Image */}
           <img
-            src="/public/laptop.jpg"
+            src="/laptop.jpg"
             alt="Banner"
             className="w-full h-full object-cover"
           />
@@ -94,7 +94,7 @@ const BannerCarousel = () => {
         <div className="relative w-full h-[70vh]">
           {/* Background Image */}
           <img
-            src="/public/laptop.jpg"
+            src="/laptop.jpg"
             alt="Banner"
             className="w-full h-full object-cover"
           />
