@@ -26,14 +26,18 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/brand">Brand</Link>
+              <Link to="/brandPage">Brand</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
+            {user && (
+              <>
+                <li>
+                  <Link to={"/dashboard"}>Dashboard</Link>
+                </li>
+              </>
+            )}
             <li tabIndex={0}>
               <details>
                 <summary>Categories</summary>
@@ -79,9 +83,24 @@ const Navbar = () => {
                 </ul>
               </details>
             </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
+            {!user && (
+              <>
+                <li>
+                  <Link to={"/login"}>Login</Link>
+                </li>
+                <li>
+                  <Link to={"/register"}>Register</Link>
+                </li>
+              </>
+            )}
+            {user && (
+              <button
+                onClick={handleLogout}
+                className="btn btn-sm mr-4 bg-primary text-white"
+              >
+                LogOut
+              </button>
+            )}
           </ul>
         </div>
 
@@ -108,13 +127,15 @@ const Navbar = () => {
           </Link>
 
           {/* Profile Image */}
-          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white">
-            <img
-              src="https://i.pravatar.cc/100?img=3"
-              alt="User"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {user && (
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white">
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                alt="User"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
         </div>
 
         {/* Mobile Menu */}
@@ -143,7 +164,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/brand">Brand</Link>
+              <Link to="/brandPage">Brand</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

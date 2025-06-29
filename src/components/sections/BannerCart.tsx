@@ -1,5 +1,5 @@
 import React from "react";
-import InfoCard from "./InfoCard";
+import InfoCard from "../Home/InfoCard";
 
 const BannerCart = () => {
   return (

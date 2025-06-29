@@ -10,6 +10,10 @@ import Home from "../components/Home/Home";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Login from "../pages/Login/Login";
 import Registration from "../pages/Register/Registration";
+import ProductDetailsPage from "../pages/ProductDetails/ProductDetailsPage";
+import Contact from "../pages/contact/Contact";
+import Cart from "../pages/Cart/Cart";
+import BrandPage from "../pages/brand/BrandPage";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +36,22 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Registration />,
+      },
+      {
+        path: "/brandPage",
+        element: <BrandPage />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "product/:id", // ✅ Dynamic Product Route
+        element: <ProductDetailsPage />,
       },
     ],
   },
